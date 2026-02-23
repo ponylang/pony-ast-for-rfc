@@ -1,0 +1,16 @@
+{
+  "packages": [
+    "pony_compiler"
+  ],
+  "info": {
+    "description": "Pony compiler AST library",
+    "homepage": "https://github.com/ponylang/pony-ast-for-rfc",
+    "license": "BSD-2-Clause",
+    "documentation_url": "https://ponylang.github.io/pony-ast-for-rfc/",
+    "version": "0.0.0",
+    "name": "pony-ast-for-rfc"
+  },
+  "deps": [
+    {}
+  ]
+}
