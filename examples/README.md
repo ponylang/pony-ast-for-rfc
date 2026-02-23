@@ -1,5 +1,13 @@
 # Examples
 
-## basic
+## compile
 
-A minimal program that imports the `pony_compiler` package and prints "Hello, world!". Useful as a starting point for experimentation.
+CLI tool that compiles Pony source and reports errors.
+
+## find_type
+
+CLI tool that looks up inferred types at source positions.
+
+## locations
+
+Debug tool that prints all AST nodes with their locations.

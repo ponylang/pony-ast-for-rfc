@@ -31,7 +31,7 @@ EXAMPLES_BINARIES := $(addprefix $(BUILD_DIR)/,$(EXAMPLES))
 test: unit-tests build-examples
 
 unit-tests: $(tests_binary)
-	$^ --exclude=integration --sequential
+	$^ --sequential
 
 $(tests_binary): $(SOURCE_FILES) | $(BUILD_DIR)
 	$(GET_DEPENDENCIES_WITH)
