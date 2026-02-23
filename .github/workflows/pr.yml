@@ -42,5 +42,12 @@ jobs:
       image: ghcr.io/ponylang/shared-docker-ci-standard-builder:nightly
     steps:
       - uses: actions/checkout@v4.1.1
+      - name: fix home dir being overwritten by github
+        run: |
+          echo "HOME=/root" >> $GITHUB_ENV
+      - name: add current ponyc packages dir to PONYPATH
+        run: |
+          PONY_LOCATION=$(ponyup show ponyc -b | awk '{ print $1 }')
+          echo "PONYPATH=$HOME/.local/share/ponyup/$PONY_LOCATION/packages:$PONYPATH" >> $GITHUB_ENV
       - name: Test
         run: make test config=debug
